@@ -18,9 +18,8 @@
 					</td>
 					<td valign="top" style="padding: 3px;">
 						<%
-							var rndColorFav = Math.random()*5;
 							var colorFav = "#00FF00;";
-							if (rndColorFav <= 2) colorFav = "#C0C0C0;";
+							if (carIdx > 8) colorFav = "#C0C0C0;";
 						%>
 						<button class="slds-button slds-button--icon"
 						style="border: 1px solid <%= colorFav %> padding: 5px;"
