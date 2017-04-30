@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="/SLDS/styles/salesforce-lightning-design-system.css" />	
+		<title>ELTORO Cars : Search</title>
+		<style>
+			.carInfoPadding {
+				padding: 10px;
+			}
+			.carInfoSmall {
+				color: white;
+				width: 217px;
+				height: 217px;
+				background-color: black;
+			}
+			.carInfoSmall a {
+				color: white;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<% include partials/header.ejs %>
+		<% include partials/filterMenu.ejs %>
+		<div>
+			<div class="slds-grid slds-wrap">
+				<% for (var carIdx = 0; carIdx < 50; carIdx+=1) { %>
+					<% include partials/carInfoSmall.ejs %><br/>
+				<% } %>
+			</div>
+		</div>
+	</body>
+</html>

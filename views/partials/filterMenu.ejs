@@ -1,0 +1,132 @@
+<style>
+	.filterButton {
+		border:0px;
+		color: white;
+		font-size: 1.25em;
+		cursor: pointer;
+		background-color: black;
+	}
+	.filterButton:focus {
+		outline:0;
+	}
+	.filterMenu {
+		color: white;
+		background-color: black;
+	}
+	.filterContent {
+		left:0px;
+		z-index: 1;
+		color: white;
+		display: none;
+		overflow: auto;
+		min-width: 160px;
+		position: absolute;
+		background-color: black;
+	}
+	.filterContent a {
+		color: white;
+	}
+	.filterShow {display:block;}
+	.filterOpen {
+		color: black;
+		background-color: white;
+	}
+	.filterMenu .slds-form-element__label {
+		color: white;
+	}
+</style>
+<div class="filterMenu">
+	<button onclick="toggleShow()" id="filterButton"
+	class="filterButton">Filter Vehicles</button>
+	<div id="filterDropdown" class="filterContent">
+		<!-- Close Button -->
+		<table width="100%" border="1">
+			<tr>
+				<td style="text-align: right;">
+					<button class="slds-button slds-button--icon"
+					onclick="filterHide()">
+						<svg class="slds-button__icon" aria-hidden="true"
+						style="color:white">
+							<use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#close"></use>
+						</svg>
+					</button>
+				</td>
+			</tr>
+		</table>
+		<!-- Form -->
+		<div class="slds-m-around--medium">
+			<div class="slds-form--stacked">
+				<!-- Filter: Type -->
+				<div class="slds-form-element">
+					<label class="slds-form-element__label" for="filterType">
+					Type
+					</label>
+					<div class="slds-form-element__control">
+						<div class="slds-select_container">
+							<select id="filterType" class="slds-select">
+								<option>Option One</option>
+								<option>Option Two</option>
+								<option>Option Three</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<!-- Filter: Year -->
+				<div class="slds-form-element">
+					<label class="slds-form-element__label" for="filterYear">
+					Year
+					</label>
+					<div class="slds-form-element__control">
+						<div class="slds-select_container">
+							<select id="filterYear" class="slds-select">
+								<option>Option One</option>
+								<option>Option Two</option>
+								<option>Option Three</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<!-- Filter: Type -->
+				<div class="slds-form-element">
+					<label class="slds-form-element__label" for="filterMake">
+					Make
+					</label>
+					<div class="slds-form-element__control">
+						<div class="slds-select_container">
+							<select id="filterMake" class="slds-select">
+								<option>Option One</option>
+								<option>Option Two</option>
+								<option>Option Three</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<!-- Filter: Search -->
+				<br/><br/>
+				<div class="slds-form-element">
+					<button type="button" class="slds-button slds-button--brand"
+					style="width:100%" onclick="filterHide()">Search</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<script>
+	/* When the user clicks on the button, 
+	toggle between hiding and showing the dropdown content */
+	function toggleShow() {
+		var filterButton = document.getElementById("filterButton");
+		filterButton.classList.toggle("filterOpen");
+		
+		var filterDropdown = document.getElementById("filterDropdown");
+		filterDropdown.classList.toggle("filterShow");
+	}
+	function filterHide() {
+		var filterButton = document.getElementById("filterButton");
+		filterButton.classList.remove("filterOpen");
+		
+		var filterDropdown = document.getElementById("filterDropdown");
+		filterDropdown.classList.remove("filterShow");
+	}
+</script>
