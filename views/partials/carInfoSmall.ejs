@@ -17,11 +17,24 @@
 						- <a href="#">review</a>
 					</td>
 					<td valign="top" style="padding: 3px;">
+						<%
+							var rndColorFav = Math.random()*5;
+							var colorFav = "#00FF00";
+							if (rndColorFav <= 1) colorFav = "#C0C0C0";
+						%>
 						<button class="slds-button slds-button--icon"
-						style="border: 1px solid #f28b00; padding: 5px;"
+						style="border: 1px solid <%= colorFav %> padding: 5px;"
+							onclick="alert('I Like IT');">
+							<svg class="slds-button__icon" aria-hidden="true"
+							style="color:<%= colorFav %>;">
+								<use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#favorite"></use>
+							</svg>
+						</button><br/>
+						<button class="slds-button slds-button--icon"
+						style="border: 1px solid #F28B00; padding: 5px;"
 							onclick="alert('Call Me');">
 							<svg class="slds-button__icon" aria-hidden="true"
-							style="color:#f28b00">
+							style="color:#F28B00;">
 								<use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#call"></use>
 							</svg>
 						</button>
