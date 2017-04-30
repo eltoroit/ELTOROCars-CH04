@@ -19,14 +19,14 @@
 					<td valign="top" style="padding: 3px;">
 						<%
 							var rndColorFav = Math.random()*5;
-							var colorFav = "#00FF00";
-							if (rndColorFav <= 1) colorFav = "#C0C0C0";
+							var colorFav = "#00FF00;";
+							if (rndColorFav <= 2) colorFav = "#C0C0C0;";
 						%>
 						<button class="slds-button slds-button--icon"
 						style="border: 1px solid <%= colorFav %> padding: 5px;"
 							onclick="alert('I Like IT');">
 							<svg class="slds-button__icon" aria-hidden="true"
-							style="color:<%= colorFav %>;">
+							style="color:<%= colorFav %>">
 								<use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#favorite"></use>
 							</svg>
 						</button><br/>
