@@ -1,5 +1,7 @@
 {
     "name": "ELTORO Cars (Chapter 5)",
     "description": "Files for ELTORO Cars chapter 5",
-    "repository": "https://github.com/eltoroit/ELTOROCars-CH05"
+    "repository": "https://github.com/eltoroit/ELTOROCars-CH05",
+    "logo": "https://eltoroit.herokuapp.com/resource/Blog/Logo138x150.png",
+    "keywords": ["ELTORO","Cars","Salesforce","Heroku","Node.js"]
 }
