@@ -8,7 +8,7 @@ This code goes with the eBook found here *WHERE?*
 
 ## Motivation
 
-Companion files for Chapter 4 of eBook
+Companion files for Chapter 5 of eBook
 
 ## History
 
